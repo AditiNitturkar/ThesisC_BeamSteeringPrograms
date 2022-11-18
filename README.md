@@ -1,1 +1,8 @@
-# ThesisC_BeamSteeringPrograms
+# ThesisC Beam Steering Programs
+
+In this repository, you can find four main programs that can be used to perform various functions with the Mirrocle MEMS mirrors for beam steering experiments. These programs form part of my Honour's Thesis Work towards my Bachelor of Mechatronics and Computer Science. 
+
+1. For sequential scanning, configure the frequency and mode in the code in sequentialScanning.m to the desired frequency (which is restricted by the code by a floor value of 0.01Hz chosen arbitrarily up to a maximum of 2kHz). Choose mode 0 for rectangular scan and mode 1 for zigzag scan, which runs indefinitely until terminated by any keyboard keypress.
+2. For arbitrary access looped scanning, use the code in arbitraryAccessLoopedScanning.m, and configure the channelOrder variable to specify the channel numbers from 1 to 64 that you would like to traverse, the runs variable to the number of times you would like the controller to cycle through the channels and the timePause variable to configure the dwell time for a particular channel. 
+3. For arbitrary access scanning where the user can input channels and the MEMS hovers at a given channel until moved, use userInputBasedArbitraryAccessScanning.m, and input in console the channel you wish to traverse to as a (col,row). For example, if you wish to stimulate the fourth channel in the first row, you would input 4,1. To exit the program, simply enter 9,9. 
+4. For stimulation, use stimulation.m, configuring channelOrder to be the channels the stimulation should occur at, stimFreq to be the frequency of pulses up to a maximum of 10Hz, pulseWidth in milliseconds, and numPulses that you wish the stimulate for at a given channel. If you would like multiple runs of the channel sequence, simply ensure the channelOrder variable encapsulates that.
